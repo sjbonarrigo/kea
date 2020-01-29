@@ -30,7 +30,8 @@ RUN wget https://github.com/log4cplus/log4cplus/archive/${LOG4CPLUS_VERSION}.zip
     && make install 
 
 RUN cd / \
-    && git clone https://github.com/NEONScience/kea \
+#    && git clone https://github.com/NEONScience/kea \
+    && git clone https://github.com/sjbonarrigo/kea \
     && cd /kea \
     && git checkout badclient-workaround-${KEA_VERSION} \
     && cp -r patch/* ../. \
