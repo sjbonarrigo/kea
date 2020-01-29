@@ -34,6 +34,7 @@ RUN cd / \
     && git clone https://github.com/sjbonarrigo/kea \
     && cd /kea \
     && git checkout badclient-workaround-${KEA_VERSION} \
+    && cd /kea/docker \
     && cp -r patch/* ../. \
     && autoreconf --install \
     && ./configure --enable-shell --enable-generate-messages \
